@@ -6,10 +6,9 @@ This repository provides **R and Python implementations** of an end-to-end trans
 It supports the analysis of gene expression data from microarrays or RNA-seq to identify **differentially expressed genes (DEGs)** and visualize expression patterns.
 ---
 
-Install dependencies:  pip install scanpy pandas numpy statsmodels matplotlib seaborn
-
-
-Run the script:  python transcriptomic_analysis.py
+- Install dependencies:  pip install scanpy pandas numpy statsmodels matplotlib seaborn
+#
+- Run the script:  python transcriptomic_analysis.py
 
 ## 🚀 Features
 - Load and preprocess raw gene expression data  
