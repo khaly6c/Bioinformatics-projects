@@ -7,6 +7,8 @@ It supports the analysis of gene expression data from microarrays or RNA-seq to 
 ---
 
 Install dependencies:  pip install scanpy pandas numpy statsmodels matplotlib seaborn
+
+
 Run the script:  python transcriptomic_analysis.py
 
 ## 🚀 Features
