@@ -37,14 +37,10 @@ This pipeline emphasizes data integrity, reproducibility, and scientific rigor, 
 Developed using the Bioconductor ecosystem, the R version focuses on transparency, interpretability, and statistical robustness.
 
 Dependencies:
-
-affy – preprocessing and background correction
-
-limma – differential expression analysis
-
-biomaRt – gene annotation
-
-gplots, dendextend – visualization and clustering
+- affy – preprocessing and background correction
+- limma – differential expression analysis
+- biomaRt – gene annotation
+- gplots, dendextend – visualization and clustering
 
 --
 
@@ -53,13 +49,11 @@ Run the pipeline:
 Rscript transcriptomic_analysis.R
 
 --
+
 Output files include:
-
-Normalized expression matrices
-
-DEG tables (DEG.txt)
-
-Heatmaps and cluster dendrograms
+- Normalized expression matrices
+- DEG tables (DEG.txt)
+- Heatmaps and cluster dendrograms
 
 # Python Implementation
 
