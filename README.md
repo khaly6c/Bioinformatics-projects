@@ -46,11 +46,13 @@ biomaRt – gene annotation
 
 gplots, dendextend – visualization and clustering
 
+--
+
 Run the pipeline:
 
 Rscript transcriptomic_analysis.R
 
-
+--
 Output files include:
 
 Normalized expression matrices
