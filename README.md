@@ -77,6 +77,7 @@ The Python workflow performs:
 - DEG identification using linear modeling
 - Visualization with heatmaps and PCA
 
+
 # Repository Structure
 Bioinformatics-projects/
 │
