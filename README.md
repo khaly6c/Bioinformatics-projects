@@ -7,7 +7,7 @@ The project aims to demonstrate practical expertise in computational biology, da
 
 The workflow is designed for microarray or RNA-seq datasets (e.g., Affymetrix .CEL files) and enables the identification of differentially expressed genes (DEGs) between experimental conditions such as control vs disease.
 
-# Objectives
+## Objectives
 
 This project illustrates the core analytical steps of a bioinformatics transcriptomic workflow, including:
 - Preprocessing and normalization of high-dimensional gene expression data
@@ -18,7 +18,7 @@ This project illustrates the core analytical steps of a bioinformatics transcrip
 
 This pipeline emphasizes data integrity, reproducibility, and scientific rigor, mirroring best practices used in research environments.
 
- # Key Features
+ ## Key Features
 
 - Quality control and exploratory data visualization (histograms, boxplots, MA plots)
 
@@ -32,7 +32,7 @@ This pipeline emphasizes data integrity, reproducibility, and scientific rigor, 
 
 - Parallel Python implementation leveraging Scanpy and Statsmodels
 
-# R Implementation
+## R Implementation
 
 Developed using the Bioconductor ecosystem, the R version focuses on transparency, interpretability, and statistical robustness.
 
@@ -55,7 +55,7 @@ Output files include:
 - DEG tables (DEG.txt)
 - Heatmaps and cluster dendrograms
 
-# Python Implementation
+## Python Implementation
 
 The Python version mirrors the analytical flow using modern data science frameworks.
 It provides flexibility for integration with RNA-seq data and machine learning-based analyses.
@@ -74,7 +74,7 @@ The Python workflow performs:
 - Visualization with heatmaps and PCA
 
 
-# Repository Structure
+## Repository Structure
 Bioinformatics-projects/
 │
 ├── transcriptomic_analysis.R        # R implementation (Bioconductor)
@@ -83,14 +83,14 @@ Bioinformatics-projects/
 ├── results/                         # Output DEG tables and visualizations
 └── README.md                        # Project overview
 
-# References
+## References
 
 Smyth, G. K. (2004). Linear Models and Empirical Bayes Methods for Assessing Differential Expression in Microarray Experiments. Statistical Applications in Genetics and Molecular Biology.
 
 Bioconductor Project: https://bioconductor.org
 Scanpy Documentation: https://scanpy.readthedocs.io
 
-# Scientific Context
+## Scientific Context
 
 This project was developed as part of an academic initiative focused on bioinformatics research and data-driven biology.
 It integrates techniques from transcriptomics, statistics, and machine learning to extract biological insights from high-throughput data.
