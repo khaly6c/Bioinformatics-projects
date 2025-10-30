@@ -172,6 +172,18 @@ This part identifies specific types of interactions/edges labeled 'CHH' in the m
 - Iterates through all nodes to find chemically modified nucleotides.
 - Iterates through all edges to find edges labeled 'CHH' (possibly a specific hydrogen bond or chemical interaction).
 
+
+## Example Output
+node=(12, 'A'), data['nucleotide']='m3C', chain='A', position=12
+source=(5, 'B'), target=(8, 'B'), data['label']='CHH'
+
+
+This output indicates:
+- A modified nucleotide m3C at position 12 on chain A.
+- A chemical interaction (CHH) between nucleotides at positions 5 and 8 on chain B.
+  
+<img width="1536" height="1024" alt="graph_example" src="https://github.com/user-attachments/assets/5ffc80e4-d338-411c-8254-2d67e19823bd" />
+
 ---
 ##  Notebook: `GenerateData_working_fulldata.ipynb`
 
