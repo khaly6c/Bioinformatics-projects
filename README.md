@@ -100,8 +100,7 @@ The pipeline can be extended to incorporate:
 - Gene Ontology (GO) and pathway enrichment analysis
 - Machine learning-based classification of gene expression profiles
 
-# 2) RNA Structure :  RNA Molecular Graph Data Exploration and Generation
-
+# 2) RNA Structure 
 
 This repository contains tools for **loading, inspecting, and preparing RNA molecular graph data** stored in serialized (`.pickle`) format using the **NetworkX** library.
 
@@ -121,8 +120,81 @@ RNA molecular structures can be represented as **graphs**, where:
 Each `.pickle` file in the `NetworkxGraph/` directory stores a single molecular graph, serialized as a **NetworkX** object.
 
 ---
+## RNA Molecular Graph Analysis
 
+This repository contains a Python script that loads and analyzes a molecular graph (e.g., RNA structure) stored in a pickle file using **NetworkX**.
+
+---
+
+## 🧠 Overview
+
+The script 'algo.py' performs the following operations:
+
+1. **Loads** a serialized molecular graph from a `.pickle` file.  
+2. **Iterates through all nodes** to identify **chemically modified nucleotides**.  
+3. **Traverses all edges** to find specific **chemical interactions** labeled `'CHH'`.
+
+---
+
+## 📜 Code Explanation
+### 1. Imports
+import pickle
+import networkx as nx
+
+pickle is used to load serialized Python objects from files.
+networkx is a library for creating and manipulating graphs/networks.
+
+### 2. Load the graph from a pickle file
+with open('1S72.pickle', 'rb') as f:
+    graph = pickle.load(f)
+
+
+This opens a file called 1S72.pickle in binary read mode.
+
+pickle.load(f) deserializes the file and loads it as a Python object.
+
+Here, it’s expected to be a NetworkX graph object, likely representing a molecular structure (e.g., RNA).
+
+### 3. Iterate over all nodes and access node attributes
+for node, data in graph.nodes(data=True):
+    position, chain = node
+
+graph.nodes(data=True) iterates over each node and its associated attributes.
+
+Each node is assumed to be a tuple (position, chain):
+- position → probably the nucleotide’s position in the sequence.
+- chain → the chain identifier in the molecule.
+- data is a dictionary with attributes of the node, like nucleotide.
+
+### 4. Check for chemically modified nucleotides
+if data['nucleotide'] not in ('A', 'C', 'G', 'U'):
+    print(f"{node=}, {data['nucleotide']=}, {chain=}, {position=}")
+
+
+Checks if the nucleotide is not one of the standard RNA bases (A, C, G, U).
+
+If it’s something else (chemically modified), it prints information about that node: its position, chain, and nucleotide type.
+
+So this part identifies modified nucleotides in the RNA structure.
+
+### 5. Iterate over edges and check for “CHH” labels
+for source, target, data in graph.edges(data=True):
+    if data['label'] == 'CHH':
+        print(f"{source=}, {target=}, {data['label']=}")
+
+
+graph.edges(data=True) iterates over all edges and their attributes.
+
+Checks if the edge has a label CHH.
+If yes, it prints the source node, target node, and the edge label.
+So this part identifies specific types of interactions/edges labeled 'CHH' in the molecular graph.
+
+### Summary
+- Loads a molecular structure (RNA) graph from a pickle file.
+- Iterates through all nodes to find chemically modified nucleotides.
+- Iterates through all edges to find edges labeled 'CHH' (possibly a specific hydrogen bond or chemical interaction).
 ##  Notebook: `GenerateData_working_fulldata.ipynb`
+
 
 This notebook is primarily a **data exploration and verification tool**.  
 It helps confirm that the RNA graph data is structured correctly and consistent across all files.
