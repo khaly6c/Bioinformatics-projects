@@ -100,6 +100,33 @@ The pipeline can be extended to incorporate:
 - Gene Ontology (GO) and pathway enrichment analysis
 - Machine learning-based classification of gene expression profiles
 
+# 2) RNA Structure :  RNA Molecular Graph Data Exploration and Generation
+
+
+This repository contains tools for **loading, inspecting, and preparing RNA molecular graph data** stored in serialized (`.pickle`) format using the **NetworkX** library.
+
+The goal is to:
+- Understand the structure and attributes of RNA graphs derived from Protein Data Bank (PDB) data,
+- Detect chemically modified nucleotides and specialized interactions,
+- Prepare the foundation for **dataset generation** for machine learning or structural analysis.
+
+---
+
+##  Project Overview
+
+RNA molecular structures can be represented as **graphs**, where:
+- **Nodes** correspond to nucleotides (`A`, `C`, `G`, `U`, or modified bases),
+- **Edges** represent chemical or structural interactions between nucleotides.
+
+Each `.pickle` file in the `NetworkxGraph/` directory stores a single molecular graph, serialized as a **NetworkX** object.
+
+---
+
+##  Notebook: `GenerateData_working_fulldata.ipynb`
+
+This notebook is primarily a **data exploration and verification tool**.  
+It helps confirm that the RNA graph data is structured correctly and consistent across all files.
+
 # Author
 
 This project reflects the my technical expertise and research experience in:
