@@ -117,7 +117,7 @@ RNA molecular structures can be represented as **graphs**, where:
 - **Nodes** correspond to nucleotides (`A`, `C`, `G`, `U`, or modified bases),
 - **Edges** represent chemical or structural interactions between nucleotides.
 
-Each `.pickle` file in the `NetworkxGraph/` directory stores a single molecular graph, serialized as a **NetworkX** object.
+Each `.pickle` file in the `NetworkxGraph/` directory (the one provided is far from complete, you can reach out to me obtain the all dataset) stores a single molecular graph, serialized as a **NetworkX** object.
 
 ---
 ## > RNA Molecular Graph Analysis
@@ -198,3 +198,6 @@ This project reflects the my technical expertise and research experience in:
 - Data analytics and machine learning
 - Scientific programming in R and Python
 - Biological data visualization and interpretation
+  
+CISSE Khaly Bécaye Ba, MSc in Computer Science, Bioinformatics
+khalybecayecisse@gmail.com
