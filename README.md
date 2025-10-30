@@ -214,10 +214,8 @@ The loaded object is a NetworkX Graph that represents a molecule (probably RNA o
 
 ### 4. Inspects graph nodes
 i = 0
-for node, data in graph.nodes(data=True):
-    i += 1
-    print('i=', i, 'node=', node, 'data=', data, '\n\n')
 
+for node, data in graph.nodes(data=True): [...]
 
 This loops through every node in the graph and prints:
 - The node identifier (usually a tuple like (position, chain)),
@@ -234,7 +232,6 @@ For the first 10 pickle files:
 This part is purely exploratory — the goal is to check consistency and understand the data structure across multiple molecular graphs.
 
 ### Summary of what the notebook does
-Step	Purpose
 1. Load libraries	Prepare environment for data inspection.
 2. List .pickle files	Identify available molecular graph datasets.
 3. Load example graph	Open and visualize one molecular graph.
