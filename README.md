@@ -120,7 +120,7 @@ RNA molecular structures can be represented as **graphs**, where:
 Each `.pickle` file in the `NetworkxGraph/` directory (the one provided is far from complete, you can reach out to me obtain the all dataset) stores a single molecular graph, serialized as a **NetworkX** object.
 
 ---
-## > RNA Molecular Graph Analysis
+## 2.1) RNA Molecular Graph Analysis
 
 This repository contains a Python script that loads and analyzes a molecular graph (e.g., RNA structure) stored in a pickle file using **NetworkX**.
 
@@ -186,7 +186,7 @@ This output indicates:
 <img width="1536" height="1024" alt="graph_example" src="https://github.com/user-attachments/assets/5ffc80e4-d338-411c-8254-2d67e19823bd" />
 
 ---
-##  > Notebook: `GenerateData_working_fulldata.ipynb`
+##  2.2) Notebook: `GenerateData_working_fulldata.ipynb`
 
 
 
