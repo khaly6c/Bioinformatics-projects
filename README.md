@@ -175,6 +175,7 @@ This part identifies specific types of interactions/edges labeled 'CHH' in the m
 
 ## Example Output
 node=(12, 'A'), data['nucleotide']='m3C', chain='A', position=12
+
 source=(5, 'B'), target=(8, 'B'), data['label']='CHH'
 
 
@@ -185,12 +186,62 @@ This output indicates:
 <img width="1536" height="1024" alt="graph_example" src="https://github.com/user-attachments/assets/5ffc80e4-d338-411c-8254-2d67e19823bd" />
 
 ---
-##  Notebook: `GenerateData_working_fulldata.ipynb`
+##  > Notebook: `GenerateData_working_fulldata.ipynb`
 
 
-This notebook is primarily a **data exploration and verification tool**.  
-It helps confirm that the RNA graph data is structured correctly and consistent across all files.
 
+This notebook doesn’t perform analysis yet, is primarily a **data exploration and verification tool**. 
+It helps you:
+- Understand the structure and attributes inside each RNA graph,
+- Check for modified nucleotides,
+- Prepare for downstream analysis (e.g., detecting motifs, analyzing interactions, or generating datasets).
+  
+It is designed to inspect and explore RNA molecular graph data stored in NetworkX graph objects, which have been serialized as .pickle files.
+
+---
+## Code overview
+### 1. Imports libraries
+
+It imports standard scientific Python libraries (NumPy, Pandas, Seaborn, Matplotlib) and networkx for working with graphs.
+
+###  2. Lists files in the “NetworkxGraph” directory
+
+It lists all .pickle files inside the NetworkxGraph/ folder — each of these likely represents a molecular graph derived from a PDB (Protein Data Bank) structure.
+
+### 3. Loads one example graph
+Loads a specific file (e.g., 2KH9.pickle) to examine its contents.
+The loaded object is a NetworkX Graph that represents a molecule (probably RNA or a similar structure).
+
+### 4. Inspects graph nodes
+i = 0
+for node, data in graph.nodes(data=True):
+    i += 1
+    print('i=', i, 'node=', node, 'data=', data, '\n\n')
+
+
+This loops through every node in the graph and prints:
+- The node identifier (usually a tuple like (position, chain)),
+- The node’s associated attributes (stored in a dictionary, e.g. {'nucleotide': 'A'}).
+
+This helps understand what information is stored per nucleotide.
+
+### 5. Loops through several files to preview graph contents
+
+For the first 10 pickle files:
+- Loads each graph.
+- Prints each node’s index and nucleotide type (e.g., A, C, G, U, or modified bases).
+
+This part is purely exploratory — the goal is to check consistency and understand the data structure across multiple molecular graphs.
+
+### Summary of what the notebook does
+Step	Purpose
+1. Load libraries	Prepare environment for data inspection.
+2. List .pickle files	Identify available molecular graph datasets.
+3. Load example graph	Open and visualize one molecular graph.
+4. Explore nodes	Print node details (position, chain, nucleotide).
+5. Batch check multiple graphs	Verify data consistency across several files.
+
+---
 # Author
 
 This project reflects the my technical expertise and research experience in:
@@ -200,4 +251,5 @@ This project reflects the my technical expertise and research experience in:
 - Biological data visualization and interpretation
   
 CISSE Khaly Bécaye Ba, MSc in Computer Science, Bioinformatics
+
 khalybecayecisse@gmail.com
